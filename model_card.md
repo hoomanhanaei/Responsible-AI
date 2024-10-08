@@ -21,5 +21,5 @@ Jump to section:
 
 - **Potential missuses:**<br>Reduced Censorship on NSFW Content makes Command R+ capable of handling NSFW storytelling with less resistance, providing responses readily in these contexts. This increased flexibility could be exploited to generate inappropriate or harmful content ([NSFW and Censorship](https://llm.extractum.io/static/blog/?id=command-r-plus-discussions)).
 
-## Model provenance
+## Data provenance
 - `C4AI Command R+` was trained on a vast and diverse corpus of text data, comprising:<br>A- datasets that include instructions for using various tools, enabling it to understand and execute user commands effectively.<br> B- diverse conversational scenarios where tool use is required, helping the model learn appropriate responses and actions.<br>The model is optimized to perform well in the following languages: English, French, Spanish, Italian, German, Brazilian Portuguese, Japanese, Korean, Simplified Chinese, and Arabic.<br>Pre-training data additionally included the following 13 languages: Russian, Polish, Turkish, Vietnamese, Dutch, Czech, Indonesian, Ukrainian, Romanian, Greek, Hindi, Hebrew, Persian. ([Cohere docs](https://docs.cohere.com/docs/command-r-plus), [Hugging face](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
