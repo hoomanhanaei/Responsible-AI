@@ -5,7 +5,7 @@ Jump to section:
 - [Model overview](#model-overview)
 - [Data provenance](#data-provenance)
 - [Performance](#performance)
-- [Metrics](#metrics)
+- [Limitations](#limitations)
 - [Evaluation data](#evaluation-data)
 - [Training data](#training-data)
 - [Quantitative analyses](#quantitative-analyses)
@@ -27,3 +27,7 @@ Jump to section:
 Like all AI models, C4AI Command R+ may reflect **biases and prejudices** present in the data it was trained on. The model performs well only on 10 languages which may include, cultural, gender, racial, and political biases inherent in the text sources, which can lead to biased outputs.<br>Potential underrepresentation of minority languages or dialects which may introduce bias to model responses which concerns these languages. (`To list precise model baises, acure scrutinizing of training data is required.`)
 
 ## Performance
+- **Performance metrics** for the model were not available. No specific performance metric was mentioned in model documentation.<br>Although common metrics to measure the accuracy of LLM will could be employed.<br>`Perplexity` To assess how well the model predicts a sample.<br>`Generative Quality` Assess coherence and fluency with BLEU and ROUGE metrics.<br>`Accuracy` by using benchmarks like GLUE.<br> these could be measured specificly for goals intented to achive using the model.
+- **Results for different demographic groups** is not available. However since it only performs well on 10 languages, it is crucial to evaluate its output based on cultural contetxt.
+
+## Limitations
