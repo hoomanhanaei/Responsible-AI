@@ -4,7 +4,7 @@ Jump to section:
 
 - [Model overview](#model-overview)
 - [Data provenance](#data-provenance)
-- [Factors](#factors)
+- [Performance](#performance)
 - [Metrics](#metrics)
 - [Evaluation data](#evaluation-data)
 - [Training data](#training-data)
@@ -23,3 +23,7 @@ Jump to section:
 
 ## Data provenance
 - `C4AI Command R+` was trained on a vast and diverse corpus of text data, comprising:<br>A- datasets that include instructions for using various tools, enabling it to understand and execute user commands effectively.<br> B- diverse conversational scenarios where tool use is required, helping the model learn appropriate responses and actions.<br>The model is optimized to perform well in the following languages: English, French, Spanish, Italian, German, Brazilian Portuguese, Japanese, Korean, Simplified Chinese, and Arabic.<br>Pre-training data additionally included the following 13 languages: Russian, Polish, Turkish, Vietnamese, Dutch, Czech, Indonesian, Ukrainian, Romanian, Greek, Hindi, Hebrew, Persian. ([Cohere docs](https://docs.cohere.com/docs/command-r-plus), [Hugging face](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
+
+Like all AI models, C4AI Command R+ may reflect **biases and prejudices** present in the data it was trained on. The model performs well only on 10 languages which may include, cultural, gender, racial, and political biases inherent in the text sources, which can lead to biased outputs.<br>Potential underrepresentation of minority languages or dialects which may introduce bias to model responses which concerns these languages. (`To list precise model baises, acure scrutinizing of training data is required.`)
+
+## Performance
