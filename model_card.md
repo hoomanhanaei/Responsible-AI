@@ -1,5 +1,7 @@
 # Model card for "C4AI Command R+"
 
+Created in accordance with [model cards paper](https://arxiv.org/pdf/1810.03993)
+
 Jump to section:
 
 - [Model overview](#model-overview)
@@ -9,7 +11,7 @@ Jump to section:
 - [Ideas on Data and Model Governance](#ideas-on-data-and-model-governance)
 
 ## Model overview
-- **C4AI Command R+:**<br> Is an open weights research release of a 104 billion parameter large language model (LLM) designed for advanced natural language processing (NLP) tasks, and is also part of a family of open weight releases from Cohere For AI and Cohere.<br>It is Built on the transformer architecture, this model excels in text understanding, generation, and other complex (NLP) tasks. Its large parameter size allows it to capture more nuanced relationships and patterns within text, making it powerful for tasks requiring high levels of comprehension and fluency ([more](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
+- **C4AI Command R+:**<br> Is an open weights research release of a 104 billion parameter large language model (LLM) designed for advanced natural language processing (NLP) tasks, and is also part of a family of open weight releases from `Cohere For AI` and `Cohere`.<br>It is Built on the transformer architecture, this model excels in text understanding, generation, and other complex (NLP) tasks. Its large parameter size allows it to capture more nuanced relationships and patterns within text, making it powerful for tasks requiring high levels of comprehension and fluency ([more](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
 
 - **This Model performs:**<br>Various natural language processing (NLP) tasks, including text generation, summarization, translation, and question answering. Its architecture allows it to understand and generate human-like text based on the context provided, making it suitable for a range of applications in conversational AI, content creation.
 
@@ -31,7 +33,8 @@ Like all AI models, C4AI Command R+ may reflect **biases and prejudices** presen
 - **Structured Input Requirments**: The model expects document snippets to be relatively short (100-400 words per chunk). This imposes a constraint on the type of content that can be effectively processed. Longer documents need to be broken down into smaller chunks, which can lead to `Loss of Context` & `Increased Complexity`.
 - **Impact on User Experience:** May limit responsiveness and require a learning curve for effective use.
 - **Dependency on User-Supplied Preambles:** Introduce variability and a potential barrier for non-expert users.
-- **Computational Requirements:** The large size of the model necessitates significant computational resources, limiting accessibility for smaller organizations and applications.
+- **Computational Requirements:** The large size of the model necessitates significant computational resources, limiting accessibility for smaller organizations and applications ([Hugging face](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
 
 ## Ideas on Data and Model Governance
-
+- **How data provenance will be tracked in future iterations?**<br>-`Data Version Control (DVC)` DVC does not store the actual data within the version control system, its approach to managing metadata and leveraging remote storage services provides a robust framework for tracking data provenance from its metadata.
+- **How updates and version control of the model will be handled for transparency?**<br>-Using a formal `versioning system` to manage updates to the model, ensuring that each new release is documented and previous versions remain accessible.<br>-Continuous `monitoring of model performance` and outputs to identify and address emerging biases or ethical concerns.<br>-including `detailed release notes` or changelogs that describe what changes were made in each version. This helps users understand the differences between versions, such as new features, improvements, bug fixes, or potential breaking changes.
