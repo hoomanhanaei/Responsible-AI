@@ -6,11 +6,7 @@ Jump to section:
 - [Data provenance](#data-provenance)
 - [Performance](#performance)
 - [Limitations](#limitations)
-- [Evaluation data](#evaluation-data)
-- [Training data](#training-data)
-- [Quantitative analyses](#quantitative-analyses)
-- [Ethical considerations](#ethical-considerations)
-- [Caveats and recommendations](#caveats-and-recommendations)
+- [Ideas on Data and Model Governance](#ideas-on-data-and-model-governance)
 
 ## Model overview
 - **C4AI Command R+:**<br> Is an open weights research release of a 104 billion parameter large language model (LLM) designed for advanced natural language processing (NLP) tasks, and is also part of a family of open weight releases from Cohere For AI and Cohere.<br>It is Built on the transformer architecture, this model excels in text understanding, generation, and other complex (NLP) tasks. Its large parameter size allows it to capture more nuanced relationships and patterns within text, making it powerful for tasks requiring high levels of comprehension and fluency ([more](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
@@ -27,7 +23,15 @@ Jump to section:
 Like all AI models, C4AI Command R+ may reflect **biases and prejudices** present in the data it was trained on. The model performs well only on 10 languages which may include, cultural, gender, racial, and political biases inherent in the text sources, which can lead to biased outputs.<br>Potential underrepresentation of minority languages or dialects which may introduce bias to model responses which concerns these languages. (`To list precise model baises, acure scrutinizing of training data is required.`)
 
 ## Performance
-- **Performance metrics** for the model were not available. No specific performance metric was mentioned in model documentation.<br>Although common metrics to measure the accuracy of LLM will could be employed.<br>`Perplexity` To assess how well the model predicts a sample.<br>`Generative Quality` Assess coherence and fluency with BLEU and ROUGE metrics.<br>`Accuracy` by using benchmarks like GLUE.<br> these could be measured specificly for goals intented to achive using the model.
+- **Performance metrics** for the model were not available. No specific performance metric was mentioned in model documentation.<br>Although common metrics to measure the accuracy of LLM will could be employed.<br>`Perplexity` To assess how well the model predicts a sample.<br>`Generative Quality` Assess coherence and fluency with BLEU and ROUGE metrics.<br>`Accuracy` by using benchmarks like GLUE.<br> these could be measured specificly for goals intented to achive using the model.<br>`RAI (Responsible AI)` Is also a crucial metric to ensure ethical use and mitigate potential risks, which can be applied using pre-designed questions in different RAI categories.
 - **Results for different demographic groups** is not available. However since it only performs well on 10 languages, it is crucial to evaluate its output based on cultural contetxt.
 
 ## Limitations
+- The immediate applicability of this model `“out of the box”` may be constrained for specific requirements. For instance, It might not perform well out-of-the-box for pure code completion ([Hugging face](https://huggingface.co/CohereForAI/c4ai-command-r-plus-4bit)).
+- **Structured Input Requirments**: The model expects document snippets to be relatively short (100-400 words per chunk). This imposes a constraint on the type of content that can be effectively processed. Longer documents need to be broken down into smaller chunks, which can lead to `Loss of Context` & `Increased Complexity`.
+- **Impact on User Experience:** May limit responsiveness and require a learning curve for effective use.
+- **Dependency on User-Supplied Preambles:** Introduce variability and a potential barrier for non-expert users.
+- **Computational Requirements:** The large size of the model necessitates significant computational resources, limiting accessibility for smaller organizations and applications.
+
+## Ideas on Data and Model Governance
+
